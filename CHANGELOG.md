@@ -15,6 +15,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 - `Faker.Person.PtBr.male_first_name` - add Brazilian Portuguese male first name generator [[@FranciscoLira](https://github.com/FranciscoLira)]
 - `Faker.Person.PtBr.female_prefix` - add Brazilian Portuguese female prefix generator [[@FranciscoLira](https://github.com/FranciscoLira)]
 - `Faker.Person.PtBr.male_prefix` - add Brazilian Portuguese male prefix generator [[@FranciscoLira](https://github.com/FranciscoLira)]
+- Change data storage to files [[@laraujo7](https://github.com/laraujo7)]
 
 ### Changed
 

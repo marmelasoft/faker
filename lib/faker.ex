@@ -146,7 +146,25 @@ defmodule Faker do
     end
   end
 
-  defmacro sampler(name, data) do
+  defmacro sampler(name, data) when is_list(data) do
+    count = Enum.count(data)
+
+    mapped_data =
+      data |> Enum.with_index() |> Enum.into(%{}, fn {k, v} -> {v, k} end) |> Macro.escape()
+
+    quote do
+      def unquote(name)() do
+        unquote(mapped_data)
+        |> Map.get(Faker.random_between(0, unquote(count - 1)))
+      end
+    end
+  end
+
+  defmacro sampler(name, file) when is_binary(file) do
+    data =
+      File.read!(file)
+        |> String.split("\n")
+
     count = Enum.count(data)
 
     mapped_data =
