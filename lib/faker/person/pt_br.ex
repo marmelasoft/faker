@@ -11,13 +11,13 @@ defmodule Faker.Person.PtBr do
   ## Examples
 
       iex> Faker.Person.PtBr.name()
-      "Dr. Hélio Mendes Neto"
+      "Dra. Ayla Mendes"
       iex> Faker.Person.PtBr.name()
-      "Bernardo Mangueira"
+      "Sra. Ana Lívia Garcês"
       iex> Faker.Person.PtBr.name()
-      "Sr. Arthur Santana Neto"
+      "João Junqueira"
       iex> Faker.Person.PtBr.name()
-      "João Gabriel Resende"
+      "Pedro Henrique da Penha"
   """
   @spec name() :: String.t()
   def name, do: name(Faker.random_between(0, 12))
